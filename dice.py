@@ -1,20 +1,16 @@
-from uri_template import expand
-
-c20 = '#141F52'
-hk45 = '#1DC9A4'
-sg55 = '#F97A1F'
-
-
 import tkinter as tk
 
+# Layout
 window = tk.Tk()
-window.columnconfigure(0, weight=1, minsize=250)
+window.title('Dice simulator')
 window.rowconfigure([0, 1], weight=1, minsize=100)
+window.columnconfigure(0, weight=1, minsize=250)
 
-label1 = tk.Label(text="A")
-label1.grid(row=0, column=0)
+btn_roll = tk.Button(master=window, text='Roll')
+lbl_dvalue = tk.Label(master=window, text='1')
 
-label2 = tk.Label(text="B")
-label2.grid(row=1, column=0)
+btn_roll.grid(row=0, column=0, sticky='ewns')
+lbl_dvalue.grid(row=1, column=0, sticky='ew')
 
 window.mainloop()
+
